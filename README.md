@@ -1,2 +1,1 @@
-# script-kittie
-Scripts I've accumulated over the years
+# Scripts I've accumulated over the years
