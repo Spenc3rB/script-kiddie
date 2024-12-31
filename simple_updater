@@ -1,19 +1,27 @@
-#!/usr/bin/env bash -e
+#!/usr/bin/env bash
 
 # Change these variables to match your setup
 REPO_URL="https://github.com/yourusername/yourrepository.git"
 CLONE_DIR="$HOME/repository_clone"
 TARGET_DIR="$1" # (first argument passed to the script)
-BACKUP_DIR="$HOME/backup_$(date +%Y%m%d%H%M%S)"
+BACKUP_DIR="$HOME/simple-backup_$(date +%Y%m%d%H%M%S)"
+
 
 if [ ! -d "$CLONE_DIR" ]; then
     git clone "$REPO_URL" "$CLONE_DIR"
 fi
 
+if [ ! -d "$TARGET_DIR" ]; then
+    echo "Target directory does not exist. Usage: $0 <target_directory>"
+    exit 1
+fi
+
 cd "$CLONE_DIR" || exit # --> there was no directory found if the script exits here
 git fetch origin
 git reset --hard origin/main
+cd ../
 
+echo "Running diff -r $CLONE_DIR $TARGET_DIR"
 if ! diff -r "$CLONE_DIR" "$TARGET_DIR"; then
     # start the backup process
     mkdir -p "$BACKUP_DIR"
