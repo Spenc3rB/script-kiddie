@@ -2,6 +2,7 @@
 
 ## Table of Contents
 1. [Simple Updater](#1.-Simple-Updater)
+2. [j1708-rp1210.py](#2.-j1708-rp1210.py)
 
 ### 1. Simple Updater
 
