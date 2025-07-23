@@ -66,13 +66,7 @@ This cron job will run the script at midnight every day.
 This script is a simple Python-based J1708 to RP1210 bridge. It allows you to read J1708 messages and send them over an RP1210 interface. To use it, ensure you have Python installed and the required libraries:
 
 ```powershell
-<32-bit Python> -m pip install "setuptools~=58.1.0"
-<32-bit Python> -m pip install "jsbeautifier~=1.14.3"
-<32-bit Python> -m pip install "PyYAML~=6.0"
-<32-bit Python> -m pip install "tqdm~=4.62.3"
 <32-bit Python> -m pip install "git+https://github.com/dfieschko/RP1210"
-<32-bit Python> -m pip install "bitstring~=3.1.9"
-<32-bit Python> -m pip install "scapy~=2.4.5"
 ```
 
 Then install the script:
