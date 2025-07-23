@@ -78,7 +78,7 @@ This script is a simple Python-based J1708 to RP1210 bridge. It allows you to re
 Then install the script:
 
 ```powershell
-wget https://raw.githubusercontent.com/Spenc3rB/script-kiddie/refs/heads/main/j1708-rp1210
+wget https://raw.githubusercontent.com/Spenc3rB/script-kiddie/refs/heads/main/j1708-rp1210.py
 ```
 
 and run it:
